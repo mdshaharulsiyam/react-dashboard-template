@@ -1,0 +1,10 @@
+.rs-panel-body{
+    padding: 0 0px !important;
+}
+.rs-panel-btn{
+    padding: 10px 0 !important;
+}
+
+.rs-panel-collapsible>.rs-panel-header{
+    padding: 0;
+}

@@ -1,0 +1,8 @@
+.ui.selection.dropdown .menu>.item{
+    background-color: white;
+    border:none;
+    
+}
+.ui.selection.dropdown .menu>.item:hover{
+    background-color: aquamarine;
+}

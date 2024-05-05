@@ -1,0 +1,29 @@
+.p-datatable th {
+    text-align: center !important;
+}
+.w3-table-all th{
+    align-items: center !important;
+
+}
+.p-datatable .p-column-header-content {
+    display: block !important;
+    align-items: center !important;
+}
+.close-button {
+    background-color: transparent;
+    color: gray;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    transition: color 0.3s ease;
+    font-weight: medium;
+
+}
+.close-button:hover {
+    color: black;
+}
+
+
+ input{
+    font-size:65%;
+ }

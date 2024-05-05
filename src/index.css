@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Example CSS to customize React Quill toolbar */
+
+:root {
+  --primary-color: rgb(55 65 81);
+  --dark-color: rgb(93, 89, 108);
+  --primary-bg: #F8F7FA;
+  --dark-bg: #25293C;
+  --primary-hover-color: blue;
+  --dark-hover-color: blue;
+  --primary-hover-bg: rgb(243 244 246);
+  --dark-hover-bg: rgb(243 244 246);
+  --scendary-bg: white;
+}
+
+@layer utilities {
+  body {
+    @apply bg-[#F8F7FA] dark:bg-[#25293C]
+  }
+
+  .dashboard {
+    @apply bg-[#F8F7FA] dark:bg-[#25293C]
+  }
+
+  #sideber {
+    @apply bg-[var(--scendary-bg)]
+  }
+
+  #sideberScrollber {
+    @apply overflow-y-scroll h-dvh
+  }
+
+  li {
+    @apply list-none
+  }
+
+  .menu-item {
+    @apply text-[15px] flex justify-start items-center gap-1 hover:bg-[var(--primary-hover-bg)] hover:text-[var(--primary-hover-color)] hover:pl-4 p-2 rounded-md transition-all cursor-pointer text-gray-700 font-semibold my-1
+  }
+
+  .menu-icon {
+    @apply text-2xl w-[24px] h-[24px] min-w-[24px] min-h-[24px]
+  }
+
+  .dropdown-menu {
+    @apply text-[10px]
+  }
+
+  .dropdown-menu-parent {
+    @apply pl-2 max-h-0 overflow-hidden
+  }
+
+  .dropdown-menu-show {
+    @apply max-h-max
+  }
+
+  .sideber {
+    @apply w-[270px] z-10
+  }
+
+  .sideber-colapsed {
+    @apply w-[65px]
+  }
+}
+.sideber-colapsed{
+transition: .4s;
+}
+.sideber-open{
+transition: 1s;
+}
+#sideberScrollber::-webkit-scrollbar {
+  display: none;
+}
+
+.accordionOpen {
+  animation: accordionopen 2s;
+}
+
+.text-open {
+  animation: textOpen 1s;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+
+/* accordion animation  */
+@keyframes accordionopen {
+  from {
+    max-height: 0px;
+  }
+
+  to {
+    max-height: 720px;
+  }
+}
+
+.accordionClose {
+  animation: accordionclose .8s;
+}
+
+@keyframes accordionclose {
+  from {
+    max-height: 720px;
+  }
+
+  to {
+    max-height: 0px;
+  }
+}
+
+/* text animation  */
+@keyframes textOpen {
+  from {
+    max-width: 0;
+  }
+
+  to {
+    max-width: 200px;
+  }
+}
