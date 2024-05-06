@@ -132,7 +132,7 @@ const Dashboard = () => {
 
   }, [location.pathname, showText, mouseEnterInSIderber])
   return (
-    <div id="dBoardSideber" className={``}>
+    <div id="dBoardSideber" className={`dark:bg-[#2F3249] dark:text-gray-300`}>
       <div id="sideberScrollber" className={` px-3`}>
         <Logo show={show} setShow={setShow} />
         {sideBerlink.map((item, index) => (
