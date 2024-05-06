@@ -61,9 +61,9 @@ const TemplateCustomizer = () => {
         setSemidark(false)
         setShowTopMenu(false)
     }
-    return (
-        <div id="themeChangerParent" style={{ boxShadow: 'rgba(0, 0, 0, 0.1) 1px 1px 3px 2px' }} className={`sm:w-[400px] w-[300px] top-0 ${themeChangerOpen ? 'right-0 ThemeChangerOpen' : '-right-[400px] ThemeChangerClose'} themeChanger h-screen min-h-screen  bg-white absolute z-[60] dark:bg-[#2F3349] dark:text-gray-300`}>
-            <div className="border-b">
+    return (//id="themeChangerParent"
+        <div id="themeChanger" style={{ boxShadow: 'rgba(0, 0, 0, 0.1) 1px 1px 3px 2px' }} className={`sm:w-[400px] w-[300px] top-0 ${themeChangerOpen ? 'right-0 ThemeChangerOpen' : '-right-[400px] ThemeChangerClose'} themeChanger h-screen  overflow-y-scroll  bg-white absolute z-[60] dark:bg-[#2F3349] dark:text-gray-300 `}>
+            <div className="border-b fixed bg-white dark:text-gray-300 dark:bg-[#2F3349] sm:w-[400px] w-[300px]">
                 <div className="grid grid-cols-6 justify-between items-start p-4 px-[26px] opacity-90 ">
                     <span className="col-span-5">
                         <h4 className="text-xl font-semibold tracking-wide dark:text-[#CBCFE9]">Template Customizer</h4>
@@ -84,7 +84,7 @@ const TemplateCustomizer = () => {
                     </button>
                 </div>
             </div>
-            <div id="themeChanger" className="overflow-y-scroll lg:h-[85dvh] h-[83dvh]">
+            <div className="pt-44">
                 <div className="px-[26px]">
 
                     <button className="button">Theming</button>
@@ -183,33 +183,7 @@ const TemplateCustomizer = () => {
                             Collapsed
                         </span>
                     </span>
-                    <h5 className="py-0 my-0 mt-3 mb-1 dark:text-gray-300 lg:block hidden">Menu (Style)</h5>
-                    <span className="lg:grid hidden grid-cols-3 gap-6 pt-2">
-                        <span onClick={() => {
-                            setThemeChangeData({
-                                ...ThemeChangeData,
-                                showTopMenu: true
-                            })
-                            // setShowText(true)
-                        }} className="cursor-pointer">
-                            <div className={`border rounded-md ${ThemeChangeData.showTopMenu ? 'border-[#8E85F3]' : ''} mb-[2px]`}>
-                                <img src={theme === 'dark' || themeChack.matches ? TopMenu : TopMenu} className=" rounded-md w-full" />
-                            </div>
-                            Top menu
-                        </span>
-                        <span onClick={() => {
-                            setThemeChangeData({
-                                ...ThemeChangeData,
-                                showTopMenu: false
-                            })
-                            // setShowText(false)
-                        }} className="cursor-pointer">
-                            <div className={`border ${ThemeChangeData.showTopMenu ? '' : 'border-[#8E85F3] '} rounded-md mb-[2px]`}>
-                                <img src={theme === 'dark' || themeChack.matches ? Expanded_dark : Expanded_dark} className=" rounded-md w-full" />
-                            </div>
-                            Sideber
-                        </span>
-                    </span>
+                  
                     <h5 className="py-0 my-0 mt-4 mb-1 dark:text-gray-300">Navbar Type  </h5>
                     <span className="grid grid-cols-3 gap-6 pt-2">
                         <span onClick={() => {
